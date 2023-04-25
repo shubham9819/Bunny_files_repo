@@ -1,0 +1,15 @@
+---  #that indicate it's yml file
+
+- name: install first playbook
+  hosts: all
+  become: true
+
+  tasks:
+    - name: install Nginx
+      apt :
+        name: nginx
+        state: present
+    - name:
+      service:
+        name: nginx
+        state: started
